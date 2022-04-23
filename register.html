@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Meta setup -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="">
+		<meta name="decription" content="">
+		
+		<!-- Title -->
+		<title>Welcome</title>
+		
+		<!-- Fav Icon -->
+		<link rel="icon" href="images/favicon.ico" />	
+
+		<!-- Include Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		
+		<!-- Main StyleSheet -->
+		<link rel="stylesheet" href="style.css" />	
+		
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="css/responsive.css" />	
+		
+	</head>
+	<body>
+
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+		<!-- login-area-area start -->	
+		<div class="login-area">
+			<div class="login-item2">
+				<a href="#"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<div class="login-item">
+				<div class="login-item-inner">
+					<form action="#" method="POST">
+						<div class="login-item-inner2">
+							<h3>Welcome to <a href="#">Altimate AI</a></h3>
+							<div>
+								<p>Have an Account ?<br><a href="#">Sign in</a></p>
+							</div>
+						</div>
+						<h2>Sign up</h2>
+						<label>Enter your email address</label>
+						<input type="email" name="" placeholder="Email address" required />	
+						<label>Enter your name</label>
+						<input type="text" name="" placeholder="Name" required>
+					    <label>Enter your Password</label>
+						<div class="login-item-inner4">
+					        <input type="password" id="txtPassword" name="txtPassword" placeholder="Password" required />
+					        <button type="button" id="btnToggle" class="toggle"><i id="eyeIcon" class="fa fa-eye"></i></button>
+					    </div>
+					    <label>Confirm  Password</label>
+						<div class="login-item-inner4">
+							<div><i id="icon" class="far fa-eye"></i></div>
+  							<input id="password" type="password" placeholder="Password">
+					    </div>
+					    <h6>Passwords must match</h6>
+					    <button type="submit">Sign up</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- login-area-area end -->		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- Main jQuery -->
+		<script src="js/jquery-3.4.1.min.js"></script>		
+
+		<!-- Bootstrap Propper jQuery -->
+		<script src="js/popper.js"></script>
+		
+		<!-- Bootstrap jQuery -->
+		<script src="js/bootstrap.js"></script>
+
+		<script>
+			
+			let passwordInput = document.getElementById('txtPassword'),
+			    toggle = document.getElementById('btnToggle'),
+			    icon =  document.getElementById('eyeIcon');
+
+
+			function togglePassword() {
+			  if (passwordInput.type === 'password') {
+			    passwordInput.type = 'text';
+			    icon.classList.add("fa-eye-slash");
+			    //toggle.innerHTML = 'hide';
+			  } else {
+			    passwordInput.type = 'password';
+			    icon.classList.remove("fa-eye-slash");
+			    //toggle.innerHTML = 'show';
+			  }
+			}
+
+			function checkInput() {
+			  //if (passwordInput.value === '') {
+			  //toggle.style.display = 'none';
+			  //toggle.innerHTML = 'show';
+			  //  passwordInput.type = 'password';
+			  //} else {
+			  //  toggle.style.display = 'block';
+			  //}
+			}
+
+			toggle.addEventListener('click', togglePassword, false);
+			passwordInput.addEventListener('keyup', checkInput, false);
+			
+			var myInput = document.getElementById('password'),
+			    myIcon = document.getElementById('icon');
+
+			myInput.onfocus = function () {
+			  myIcon.style.right = '3px'
+			}
+
+			myInput.onblur = function () {
+			  myIcon.style.right = '14px'
+			}
+
+			myIcon.onclick = function () {
+
+
+
+			  if (myIcon.classList.contains('fa-eye')) {
+
+			    this.classList.toggle('fa-eye-slash');
+			    this.classList.toggle('fa-eye');
+
+			    myInput.setAttribute('type', 'text');
+
+
+
+			  } else {
+
+
+			    myInput.setAttribute('type', 'password');
+
+			    this.classList.toggle('fa-eye');
+			    this.classList.toggle('fa-eye-slash');
+
+			  };
+			}
+
+		</script>
+
+		<!-- Fontawesome Script -->
+		<script src="https://kit.fontawesome.com/7749c9f08a.js"></script>
+		
+		<!-- Custom jQuery -->
+		<script src="js/scripts.js"></script>
+		
+		<!-- Scroll-Top button -->
+		<a href="#" class="scrolltotop"><i class="fas fa-angle-up"></i></a>
+		
+	</body>
+</html>
