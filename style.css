@@ -115,19 +115,18 @@ button:focus {
     -moz-transition: 0.5s all ease;
 }
 
-.menu-area2 .fa-times {
+.menu-area-inner {
+    position: relative;
+}
+
+.menu-area-inner .fa-times {
     font-size: 20px;
     color: #000;
     position: absolute;
-    top: 15px;
+    top: -20px;
     right: 15px;
     z-index: 9999;
     display: none;
-}
-
-.menu-area2:after {
-    content: '';
-
 }
 
 .menu-item {
@@ -241,7 +240,7 @@ button:focus {
     padding-bottom: 63px;
 }
 
-.project-item h2 {
+.project-item h1 {
     font-family: 'Arial', sans-serif;
     font-weight: 700;
     font-size: 27.2993px;
@@ -495,6 +494,10 @@ button:focus {
     background: #FFFFFF;
     border: 2px solid #53B9EA;
     box-shadow: inset 0px -1px 0px #C9CFDA;
+    min-height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .crypto-item-inner2 h2 {
@@ -717,13 +720,20 @@ button:focus {
     width: 165px;
 }
 
-.update-item5-inner3 ul {
+.update-item5-inner3 form {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.update-item5-inner3 ul li:last-of-type a {
+.update-item5-inner3 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 85px);
+}
+
+.update-item5-inner3 form button {
     font-family: 'Arial', sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -735,6 +745,7 @@ button:focus {
     justify-content: center;
     background: #BDBDBD;
     border-radius: 5.05699px;
+    border: none;
 }
 
 .update-item5-inner a {
@@ -830,7 +841,7 @@ button:focus {
     opacity: .8;
 }
 
-.login-item form h2 {
+.login-item form h1 {
     font-weight: 500;
     font-size: 55px;
     color: #000000;
@@ -999,11 +1010,12 @@ button:focus {
     transform: translateY(-50%);
 }
 
-.login-item-inner h6 {
+.login-item-inner form > span {
     font-weight: 400;
     font-size: 16px;
     color: red;
     margin: 10px 0 0;
+    display: block;
 }
 
 /*modal*/

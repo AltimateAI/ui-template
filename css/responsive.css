@@ -214,7 +214,7 @@ Small Screen - Tablate
     padding-bottom: 50px;
 }
 
-.project-item h2 {
+.project-item h1 {
     font-size: 20px;
 }
 
@@ -304,6 +304,10 @@ Small Screen - Mobile
     display: none;
 }
 
+.menu-area-inner .fa-times {
+    display: block;
+}
+
 /*=== content area start ===*/
 
 .content-area {
@@ -319,7 +323,7 @@ Small Screen - Mobile
     padding-bottom: 40px;
 }
 
-.project-item h2 {
+.project-item h1 {
     font-size: 18px;
 }
 
@@ -432,6 +436,10 @@ Small Screen - Mobile
     margin-right: 15px;
 }
 
+.update-item5-inner3 ul {
+    width: calc(100% - 70px);
+}
+
 /*=== login page start ===*/
 
 .login-area {
@@ -457,7 +465,7 @@ Small Screen - Mobile
     font-size: 12px;
 }
 
-.login-item form h2 {
+.login-item form h1 {
     font-size: 32px;
     margin: 0 0 25px;
 }
